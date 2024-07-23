@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('form');
   const contactBtn = document.getElementById('contact-btn');
-  const formSection = document.getElementById('form');
+  const formSection = document.getElementById('formtxt');
   const nameField = document.getElementById('name');
   const emailField = document.getElementById('mail');
   const messageField = document.getElementById('cajamensaje');
   const errorContainer = document.createElement('div');
+  const profileImg = document.getElementById('profile-img');
+
   form.insertBefore(errorContainer, form.firstChild);
 
   form.addEventListener('submit', function(event) {
@@ -36,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
           messageField.value = '';
           // Mostrar mensaje de éxito
           errorContainer.innerHTML += '<p>Mensaje enviado exitosamente!</p>';
-          errorContainer.style.color = 'white';
+          errorContainer.style.color = 'green';
       }
   });
 
@@ -48,4 +50,11 @@ document.addEventListener('DOMContentLoaded', function() {
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailPattern.test(email);
   }
+
+  // Cambio de imagen al hacer clic
+  profileImg.addEventListener('click', function() {
+      const currentSrc = profileImg.getAttribute('src');
+      const newSrc = currentSrc === 'assets/img/VichoAvatarTransparente.PNG' ? 'assets/img/yo.JPG' : 'assets/img/VichoAvatarTransparente.PNG';
+      profileImg.setAttribute('src', newSrc);
+  });
 });

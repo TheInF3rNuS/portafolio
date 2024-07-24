@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
 }
 
-#hero, #curriculum, #formtxt, #footer {
+#hero, #curriculum, #formtxt, #footer, #habilidades {
     background-color: var(--main-bg-color);
     padding-left: var(--padding-default);
     padding-right: var(--padding-default);
@@ -26,11 +26,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #curriculum {
-    padding-bottom: 5%;
+    padding-bottom: 2%;
 }
 
 #laboral{
     padding-bottom: 2%;
+}
+#habilidades {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 5%;
 }
 
 #formtxt {
@@ -71,7 +76,10 @@ section {
         width: 100%;
         height: auto;
     }
-
+    #habilidades {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
     #formtxt, #footer {
         padding-left: 5%;
         padding-right: 5%;
